@@ -16,7 +16,7 @@ class MinimalSubscriber(Node):
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-        playing_sounds.playingsoundcode.soundPlay(msg.sound_file, msg.volume/100.0)
+        playing_sounds.playingsoundcode.soundPlay(msg.sound_file, msg.volume/100.0, msg.playing)
 
 def main(args=None):
     rclpy.init(args=args)
